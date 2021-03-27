@@ -17,7 +17,7 @@
         <mat-checkbox formControlName="inTheater">In Theaters</mat-checkbox>
     </div>
     <div class="clear-container">
-        <button ma-mat-flat-button (ngSubmit) ="clearForm()">Clear</button>
+        <button ma-mat-flat-button (click) ="clearForm()">Clear</button>
     </div>
 </form>
 <app-movies-list [movies]="movies" ></app-movies-list>

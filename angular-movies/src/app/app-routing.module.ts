@@ -14,7 +14,7 @@ import { MoviesListComponent } from './moives/movies-list/movies-list.component'
 import { CreateMovieTheaterComponent } from './movie-theaters/create-movie-theater/create-movie-theater.component';
 import { EditMovieTheaterComponent } from './movie-theaters/edit-movie-theater/edit-movie-theater.component';
 import { IndexMovieTheaterComponent } from './movie-theaters/index-movie-theater/index-movie-theater.component';
-
+import { FilterComponent } from './movies/filter/filter.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent }
@@ -33,8 +33,9 @@ const routes: Routes = [
 
   , {path: 'moives/create', component: CreateMovieComponent }
   , {path: 'moives/edit/:id', component: EditMovieComponent }
+  , {path: 'movies/filter', component: FilterComponent }
 
-  ,{path: '**', redirectTo: ''}
+  , {path: '**', redirectTo: ''}
 
 ];
 

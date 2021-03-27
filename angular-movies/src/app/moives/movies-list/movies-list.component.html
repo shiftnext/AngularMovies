@@ -1,0 +1,29 @@
+<!-- <input type="file" style="display: none;" #uploader/>
+<button class="primary" (click)="uploader.click()">Load File</button> -->
+
+<div class="movies-container">
+    <div *ngIf="movies?.length === 0">
+        There are no records to display
+    </div>
+    <ng-container *ngIf="movies && movies.length>0">
+        <div  *ngFor="let movie of movies; let index=index;" class="movie-container">
+            <div>
+                <img [src]="movie.poster" />
+            </div>    
+            <div>
+                <h2>{{index}} {{movie.title | lowercase}}</h2>       
+              
+            </div>        
+            <div>
+                {{movie.releaseDate | date: "dd-MMM-yyy" | uppercase}} 
+            </div>
+            <div>
+                {{movie.price | currency}}
+            </div>
+            <div>
+                <button (click)="onRemove(index)" style="left: 1rem; background-color: red; color: white;" >Edit</button>   
+                <button (click)="onRemove(index)" style="left: 1rem; background-color: blue; color: white;">Remove</button>                     
+            </div>
+        </div>
+    </ng-container>
+</div>

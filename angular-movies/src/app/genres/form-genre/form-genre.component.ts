@@ -20,7 +20,7 @@ export class FormGenreComponent implements OnInit {
   form: FormGroup;
 
   @Output()
-  onSaveChanges: EventEmitter<genreCreationDTO> = new EventEmitter<generCreationDTO>();
+  onSaveChanges: EventEmitter<genreCreationDTO> = new EventEmitter<genreCreationDTO>();
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
